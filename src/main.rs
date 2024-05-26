@@ -88,13 +88,11 @@ impl State {
         }
 
         loop {
-            let source = new.glasses.get(step.from).ok_or("Invalid source index")?;
             let destination = new
                 .glasses
                 .get(step.to)
                 .ok_or("Invalid destination index")?;
 
-            if source.is_empty() {}
             if destination.is_full() {
                 return Err("No space left in destination!".into());
             }
