@@ -94,8 +94,7 @@ impl State {
                 .get(step.to)
                 .ok_or("Invalid destination index")?;
 
-            if source.is_empty() {
-            }
+            if source.is_empty() {}
             if destination.is_full() {
                 return Err("No space left in destination!".into());
             }
@@ -199,7 +198,7 @@ fn main() {
         ],
         ..Default::default()
     };
-    
+
     println!("{:?}", game.solution());
 }
 
